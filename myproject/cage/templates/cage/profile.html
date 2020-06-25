@@ -1,0 +1,17 @@
+{% extends "base.html" %}
+{% load static %}
+{% block title %} NOT NCP {% endblock %}
+{% block content %}
+<div id="profilePage">
+    <img id="monsterpic" src="/uploads/{{ monster.image }}">
+    <p>Name: {{monster.monster_name}}</p>
+    <p>Type: {{monster.behaviour_type}}</p>
+    <p>Description: {{monster.description}}</p>
+    {% for location in monster.monster_location.all %}
+        <p>Locations Found: {{location}}</p>
+    {% empty %}
+        No Locations
+    {% endfor %}
+    <p>date: {{monster.date}}</p>
+</div>
+{% endblock %}

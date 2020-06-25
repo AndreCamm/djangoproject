@@ -4,9 +4,18 @@
     <head>
         <link rel="stylesheet" href="{% static 'main.css' %}">
         <link href="https://fonts.googleapis.com/css2?family=Baumans&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=Permanent+Marker&display=swap" rel="stylesheet">
         <title>{% block title %}{% endblock %}</title>
     </head>
     <body>
+        <div class="header">
+            <img id="logo" src="{% static 'cage/img/scplogo01.png' %}">
+            <h1>SCP Foundation</h1>
+            <ul>
+                <li><a href="#Subjects">Subjects</a></li>
+                <li><a href="#Locations">Locations</a></li>
+            </ul>
+        </div>
         {% block content %}{% endblock %}
     </body>
 </html>

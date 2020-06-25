@@ -6,6 +6,7 @@ from django.conf.urls.static import static
 urlpatterns = [
     path('cage/', include('cage.urls')),
     path('admin/', admin.site.urls),
+    path('accounts/', include('django.contrib.auth.urls')), #for the login page :)
 ] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
 
 

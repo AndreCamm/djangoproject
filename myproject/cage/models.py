@@ -18,6 +18,7 @@ class Monster(models.Model):
     image = models.ImageField(upload_to ='', default='/default0.png')
     description = models.TextField()
     monster_location = models.ManyToManyField(Location)
+    date = models.DateField()
 
     def __str__(self):
         return self.monster_name
