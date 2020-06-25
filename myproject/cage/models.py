@@ -15,7 +15,7 @@ class Location(models.Model):
 class Monster(models.Model):
     monster_name = models.CharField(max_length=50)
     behaviour_type = models.CharField(choices=safety_level, max_length=6)
-    image = models.ImageField(upload_to ='uploads/', default='./uploads/default.png')
+    image = models.ImageField(upload_to ='', default='/default0.png')
     description = models.TextField()
     monster_location = models.ManyToManyField(Location)
 
