@@ -1,12 +1,13 @@
 {% extends "base.html" %}
 {% load static %}
-{% block title %} NOT NCP {% endblock %}
+{% block title %} SCP  {% endblock %}
 {% block content %}
 <div id="allMonsters">
     {% for Monster in monsters %}
-    <div class="gallery">
-        <a href="{% url 'detail' Monster.id %}"><img src="/uploads/{{ Monster.image }}"></a><br>
-        <div id="note">{{Monster.monster_name}}</div>
+    <div class="polaroid">
+        <a href="{% url 'detail' Monster.id %}">
+        <img src="/uploads/{{ Monster.image }}"></a><br>
+        <div id="note"> {{Monster.monster_name}}</div>
     </div>
     {% empty %}
     No Monster
