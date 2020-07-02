@@ -9,7 +9,7 @@
         KNOWN LOCATIONS:
         {% for location in locations %}
         <a href="{% url 'sightings' location.id %}">
-        <div class="hw">{{ location.name }}</div>
+            <div class="hw">{{ location.name }}</div>
         </a>
         {% empty %}
         No Locations
