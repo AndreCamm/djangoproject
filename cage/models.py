@@ -10,7 +10,7 @@ class Monster(models.Model):
     monster_name = models.CharField(max_length=50)
     behaviour_type = models.CharField(choices=safety_level, max_length=6)
     # image = models.ImageField(upload_to ='', default='/default0.png')
-    image = models.URLField()
+    image = models.URLField(default='https://agile-shore-66300.herokuapp.com/static/cage/img/monsters/default0.png')
     description = models.TextField()
     date = models.DateField()
 
