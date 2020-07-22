@@ -9,7 +9,8 @@ safety_level = (
 class Monster(models.Model):
     monster_name = models.CharField(max_length=50)
     behaviour_type = models.CharField(choices=safety_level, max_length=6)
-    image = models.ImageField(upload_to ='', default='/default0.png')
+    # image = models.ImageField(upload_to ='', default='/default0.png')
+    image = models.URLField()
     description = models.TextField()
     date = models.DateField()
 
